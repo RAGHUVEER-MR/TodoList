@@ -1,0 +1,131 @@
+body {
+    box-sizing: border-box;
+    background: linear-gradient(to right, #E8FFCE, #E8FFCE, #E8FFCE);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* App container */
+
+#container {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #0D1282;
+    opacity: 0.8;
+    color: #FAF0D7;
+    padding: 25px;
+    border-radius: 5%;
+}
+
+/* Heading  */
+
+h1 {
+    text-align: center;
+    font-family: cursive;
+    color: #025464;
+}
+
+/* Input */
+
+.add-task {
+    outline: none;
+    font-size: 15px;
+    padding: 15px;
+    border: none;
+    margin-bottom: 8px;
+    color: #FAF0D7;
+    background: transparent;
+}
+
+#total_tasks {
+    font-size: 18px;
+    font-family: monospace;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+}
+
+#task_counter{
+    font-family: monospace;
+    padding-left: 6px;
+}
+
+/* Tasks List */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+    align-items: center;
+    border: 2px solid #FAF0D7;
+    margin: 15px;
+}
+
+ul li:hover {
+    background: #27374D;
+}
+
+#list input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+#list label {
+    position: relative;
+    cursor: pointer;
+}
+
+#list label:before {
+    content:'';
+    background-color: transparent;
+    border: 2px solid black;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#list input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+#list input:checked + label:before {
+    background: transparent;
+}
+
+#list input:checked + label {
+    text-decoration: line-through;
+}
+
+/* Delete button style */
+
+.delete {
+    padding: 5px 0px;
+    border-radius: 3px;
+}
+
+.delete:hover {
+    cursor: pointer;
+}
